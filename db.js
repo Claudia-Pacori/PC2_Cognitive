@@ -1,8 +1,8 @@
 conn = new Mongo();
 db = conn.getDB("bd_pc2");
 
-db.categoria.insert(
+db.estudiantes.insert(
   [
-   {codigo: 'A204', nombre: 'Silla', descripcion: '4 patas'}
+   {codigo: '201810239', nombre: 'Claudia', apellido: 'Pacori', email: 'cpacori@abc.com', estado:'M'}
  ]);
 

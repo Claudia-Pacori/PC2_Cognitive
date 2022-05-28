@@ -7,7 +7,7 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
-var productosRouter = require('./routes/productos');
+var productosRouter = require('./routes/estudiantes');
 
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
@@ -16,7 +16,7 @@ var bodyParser = require('body-parser');
 var app = express();
 
 
-var mongoDB = 'mongodb://127.0.0.1:27017/db02';
+var mongoDB = 'mongodb://127.0.0.1:27017/bd_pc2';
 mongoose.connect(mongoDB, {useNewUrlParser: true, useUnifiedTopology:true});
 mongoose.Promise = global.Promise;
 var db = mongoose.connection;
@@ -35,7 +35,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/productos', productosRouter);
+app.use('/estudiantes', productosRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
