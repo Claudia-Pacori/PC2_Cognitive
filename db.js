@@ -1,9 +1,8 @@
 conn = new Mongo();
-db = conn.getDB("myappdb");
+db = conn.getDB("bd_pc2");
 
 db.usuarios.insert(
   [
-   {nombre: 'Jaime', apellido: 'Farfan', email: 'jfarfan@abc.com', estado:'A', created_at: new Date('01/23/2020')}
+   {codigo: 'A204', nombre: 'Silla', descripcion: '4 patas'}
  ]);
 
- 
